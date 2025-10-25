@@ -28,3 +28,7 @@ set splitbelow
 set splitright
 set tabstop=4
 syntax on
+
+set termguicolors
+colorscheme gruvbox
+
