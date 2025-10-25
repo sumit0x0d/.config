@@ -1,3 +1,8 @@
+set termguicolors
+syntax on
+colorscheme gruvbox
+set background=dark
+
 filetype plugin indent on
 set autoindent
 set background=dark
@@ -29,6 +34,4 @@ set splitright
 set tabstop=4
 syntax on
 
-set termguicolors
-colorscheme gruvbox
 
