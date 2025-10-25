@@ -7,7 +7,7 @@ filetype plugin indent on
 set autoindent
 set background=dark
 set cursorline
-set colorcolumn=120
+set colorcolumn=125
 set encoding=utf-8
 set expandtab
 set fileformat=unix
