@@ -1,7 +1,7 @@
 set termguicolors
 syntax on
-colorscheme gruvbox
 set background=dark
+colorscheme gruvbox
 
 filetype plugin indent on
 set autoindent
@@ -50,7 +50,8 @@ nnoremap <leader>bn :bnext<CR>
 nnoremap <leader>bp :bprevious<CR>
 nnoremap <leader>bd :bdelete<CR>
 
-nnoremap <leader>G :Git<CR>
+nnoremap <leader>g :Git<CR>
+nnoremap <leader>t :TagbarToggle<CR>
 
 nnoremap <D-k> :m .-2<CR>==
 nnoremap <D-j> :m .+1<CR>==
@@ -59,3 +60,20 @@ nnoremap <D-j> :m .+1<CR>==
 " nnoremap <D-l> :vertical resize +2<CR>
 " nnoremap <D-j> :resize -2<CR>
 " nnoremap <D-k> :resize +2<CR>
+
+set tags=./tags;/
+
+let g:netrw_dirhistmax = 0
+let g:netrw_sort_by = "name"
+let g:netrw_sort_direction = "normal"
+let g:netrw_liststyle = 1
+
+nnoremap <D-1> 1gt
+nnoremap <D-2> 2gt
+nnoremap <D-3> 3gt
+nnoremap <D-4> 4gt
+nnoremap <D-5> 5gt
+nnoremap <D-6> 6gt
+nnoremap <D-7> 7gt
+nnoremap <D-8> 8gt
+nnoremap <D-9> 9gt

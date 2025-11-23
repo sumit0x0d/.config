@@ -1,0 +1,30 @@
+--recurse=yes
+--languages=C,C++
+--extras=+fq
+--fields=+aimnSzt
+--kinds-C=+p
+--kinds-C++=+p
+
+--_if
+    $CTAGS_XCMD("uname") =~ /Darwin/
+--_then
+    --_let=SDKROOT $CTAGS_XCMD("xcrun --show-sdk-path") 
+    --include=@@SDKROOT@@/usr/include
+    --include=@@SDKROOT@@/usr/include/c++
+--_endif
+
+--_if
+    $CTAGS_XCMD("uname") =~ /Linux/
+--_then
+    --include=/usr/include
+    --include=/usr/local/include
+
+    --_let=GCCINC $CTAGS_XCMD("gcc -print-file-name=include")
+    --include=@@GCCINC@@
+
+    --include=/usr/src/linux-headers-*/include
+--_endif
+
+--regex-C=/^#include\s+<([A-Za-z0-9_\-\.]+)>/\1/h,header/
+
+--compile-commands=./build/compile_commands.json

@@ -9,6 +9,8 @@
 
 ;; (load-theme 'modus-vivendi t)
 ;; (setq modus-themes-italic-constructs t)
+
+
 ;; (setq modus-themes-bold-constructs t)
 
 ;; (set-frame-parameter nil 'alpha-background 70)
