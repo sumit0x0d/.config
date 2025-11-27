@@ -74,13 +74,14 @@ if 1
      endif
 
      call plug#begin('~/.vim/plugged')
+     Plug 'airblade/vim-gitgutter'
      Plug 'morhetz/gruvbox'
+     Plug 'preservim/tagbar'
      Plug 'sheerun/vim-polyglot'
      Plug 'tpope/vim-fugitive'
-     Plug 'airblade/vim-gitgutter'
-     Plug 'preservim/tagbar'
      call plug#end()
 
+     let g:gruvbox_contrast_dark = 'hard'
      colorscheme gruvbox
      nnoremap <leader>t :TagbarToggle<CR>
      nnoremap <leader>g :Git<CR>
