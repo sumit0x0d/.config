@@ -74,11 +74,11 @@ if 1
      endif
 
      call plug#begin('~/.vim/plugged')
-     Plug 'airblade/vim-gitgutter'
      Plug 'morhetz/gruvbox'
-     Plug 'preservim/tagbar'
      Plug 'sheerun/vim-polyglot'
      Plug 'tpope/vim-fugitive'
+     Plug 'airblade/vim-gitgutter'
+     Plug 'preservim/tagbar'
      call plug#end()
 
      colorscheme gruvbox
