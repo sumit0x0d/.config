@@ -4,18 +4,19 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-" Plug 'vim-airline/vim-airline'
+Plug 'airblade/vim-gitgutter'
+Plug 'dense-analysis/ale'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'airblade/vim-gitgutter'
+Plug 'ludovicchabant/vim-gutentags'
 Plug 'mhinz/vim-startify'
 Plug 'morhetz/gruvbox'
 Plug 'preservim/tagbar'
-Plug 'simnalamburt/vim-mundo'
+Plug 'mbbill/undotree'
 Plug 'sheerun/vim-polyglot'
 Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-Plug 'ludovicchabant/vim-gutentags'
 Plug 'tpope/vim-fugitive'
 call plug#end()
 
@@ -27,11 +28,12 @@ let g:gutentags_ctags_args = ['--languages=cpp,c,python', '--fields=+l']
 let g:gutentags_generate_on_missing = 0
 let g:gutentags_use_compdb = 0
 
-nnoremap <leader>t :TagbarToggle<CR>
-nnoremap <leader>m :MundoToggle<CR>
-nnoremap <leader>g :Git<CR>
-
 let mapleader = " "
+
+nnoremap <leader>tt :TagbarToggle<CR>
+nnoremap <leader>ut :UndotreeToggle<CR>
+let g:undotree_WindowLayout = 2
+let g:undotree_SetFocusWhenToggle = 1
 
 set autoindent
 set background=dark
@@ -68,7 +70,9 @@ set termguicolors
 set undofile
 set undodir=~/.vim/undo
 
-nnoremap <leader>e :Ex<CR>
+nnoremap <leader>e :Explore<CR>
+nnoremap <leader>w :write<CR>
+nnoremap <leader>q :quit<CR>
 
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
