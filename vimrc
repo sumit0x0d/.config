@@ -4,7 +4,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'NLKNguyen/papercolor-theme'
 Plug 'airblade/vim-gitgutter'
 Plug 'dense-analysis/ale'
 Plug 'itchyny/lightline.vim'
@@ -24,15 +23,16 @@ call plug#end()
 let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
 
-let g:gutentags_cache_dir = '~/.cache/vim/tags'
+let g:gutentags_cache_dir = '~/.vim/tags'
 let g:gutentags_ctags_args = ['--languages=cpp,c,python', '--fields=+l']
 let g:gutentags_generate_on_missing = 0
 let g:gutentags_use_compdb = 0
 
 let mapleader = " "
 
-nnoremap <leader>tt :TagbarToggle<CR>
-nnoremap <leader>ut :UndotreeToggle<CR>
+nnoremap tt :TagbarToggle<CR>
+nnoremap tu :UndotreeToggle<CR>
+
 let g:undotree_WindowLayout = 4
 let g:undotree_SetFocusWhenToggle = 1
 
