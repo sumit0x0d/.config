@@ -4,20 +4,21 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
+Plug 'NLKNguyen/papercolor-theme'
 Plug 'airblade/vim-gitgutter'
 Plug 'dense-analysis/ale'
+Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'mbbill/undotree'
 Plug 'mhinz/vim-startify'
 Plug 'morhetz/gruvbox'
 Plug 'preservim/tagbar'
-Plug 'mbbill/undotree'
 Plug 'sheerun/vim-polyglot'
-Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 let g:gruvbox_contrast_dark = 'hard'
@@ -32,7 +33,7 @@ let mapleader = " "
 
 nnoremap <leader>tt :TagbarToggle<CR>
 nnoremap <leader>ut :UndotreeToggle<CR>
-let g:undotree_WindowLayout = 2
+let g:undotree_WindowLayout = 4
 let g:undotree_SetFocusWhenToggle = 1
 
 set autoindent
@@ -97,6 +98,6 @@ let g:netrw_sort_by = "name"
 let g:netrw_sort_direction = "normal"
 let g:netrw_liststyle = 1
 
-" syntax on
+syntax on
 filetype plugin indent on
 
