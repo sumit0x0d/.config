@@ -36,6 +36,13 @@ nnoremap tu :UndotreeToggle<CR>
 let g:undotree_WindowLayout = 4
 let g:undotree_SetFocusWhenToggle = 1
 
+let g:ale_virtualtext_cursor = 0
+" let g:ale_virtualtext = 0
+nnoremap gd :ALEGoToDefinition<CR>
+nnoremap gr :ALEFindReferences<CR>
+nnoremap gi :ALEGoToImplementation<CR>
+
+
 set autoindent
 set background=dark
 set colorcolumn=125
